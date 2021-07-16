@@ -9,7 +9,7 @@ import co.java.board.serviceImpl.BoardServiceImpl;
 import co.java.board.vo.BoardVO;
 
 public class Menu {
-	BoardService dao = new BoardServiceImpl();
+	private BoardService dao = new BoardServiceImpl();
 	private Scanner scn = new Scanner(System.in);
 	
 	public void run() {
@@ -28,9 +28,14 @@ public class Menu {
 				case 1 : boardDetail(); break;
 				case 2 : boardInsert(); break;
 				case 3 : boardDelete(); break;
-				case 4 : chk = false; System.out.println("프로그램 종료."); break;
+				case 4 : 
+					chk = false; 
+					System.out.println();
+					System.out.println("──────────────────────【 Good Bye !! 】──────────────────────"); 
+					break;
 			}	
 		}
+		
 	}
 	
 	private void boardDelete() {
@@ -105,7 +110,7 @@ public class Menu {
 		List<BoardVO> list = new ArrayList<>();
 		list = dao.boardSelectList();
 		for(BoardVO vo : list) {
-			System.out.println(vo.toString());
+			vo.toString();
 		}
 	}
 	

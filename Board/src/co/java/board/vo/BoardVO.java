@@ -64,7 +64,8 @@ public class BoardVO {
 
 	@Override
 	public String toString() {
-		return "Id:" + boardId + ", 작성자:" + writer + ", 제목:" + title + ", 작성일:" + enterDate + ", 조회수:" + hit ;
+		System.out.println("Id:" + boardId + ", 작성자:" + writer + ", 제목:" + title + ", 작성일:" + enterDate + ", 조회수:" + hit );
+		return null;
 	}
 
 	
